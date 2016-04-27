@@ -1,5 +1,7 @@
 # CSiBE
 
+test
+
 [![Build Status](https://travis-ci.org/szeged/csibe.svg?branch=master)](https://travis-ci.org/szeged/csibe)
 
 [CSiBE](http://www.csibe.org) is a code size benchmark for compilers.
