@@ -2,6 +2,7 @@
 
 test
 test2
+test3
 
 [![Build Status](https://travis-ci.org/szeged/csibe.svg?branch=master)](https://travis-ci.org/szeged/csibe)
 
