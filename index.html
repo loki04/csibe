@@ -9,7 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
@@ -41,7 +41,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="about-us">
-                            <li><a href="#notavailable" data-toggle="modal" data-target="#notavailable">Compiler monitor</a></li>
+                            <li><a href="#latest" data-toggle="modal" data-target="#latest">Compiler monitor</a></li>
                             <li><a href="#notavailable" data-toggle="modal" data-target="#notavailable">Project observer</a></li>
                             <li><a href="http://www.csibe.org/old">Historical data</a></li>
                         </ul>
@@ -66,6 +66,33 @@
           <div class="modal-body">
             Stay tuned for more information to come!
           </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="latest" tabindex="-1" role="dialog" aria-labelledby="notavailableLabel">
+      <div class="modal-dialog modal-lg" id="latest_diag" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="notavailableLabel">Latest results</h4>
+          </div>
+          <div class="container">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Compilers&nbsp;<span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a id="latest-clang" role="menuitem" tabindex="-1" href="#">Clang</a></li>
+                <li role="presentation"><a id="latest-gcc" role="menuitem" tabindex="-1" href="#">GCC</a></li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation"><a id="latest-all" role="menuitem" tabindex="-1" href="#">All</a></li>    
+              </ul>
+            </div>
+          </div>
+          <div id="chart_div"></div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
@@ -196,6 +223,8 @@
 
     <!-- Custom Javascript -->
     <script src="js/custom.js"></script>
+
+    <script type="text/javascript" src="chart/chart.js"></script>
 
 </body>
 
